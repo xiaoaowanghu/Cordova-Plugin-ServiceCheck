@@ -16,7 +16,7 @@ Usage
 			alert(JSON.stringify(message));
 		}
 
-		CheckInstalledServices.check(success, failure);
+		ServiceChecker.check(success, failure);
 	});
 
 
