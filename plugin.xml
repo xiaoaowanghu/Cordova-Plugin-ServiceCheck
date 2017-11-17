@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-flying-servicechecker" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>ServiceChecker</name>
+    <js-module name="ServiceChecker" src="www/ServiceChecker.js">
+        <clobbers target="ServiceChecker" />
+    </js-module>
+	
+	<asset src="www/ServiceChecker.js" target="js/ServiceChecker.js"/>
+	
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+		  <feature name="ServiceChecker">
+			<param name="android-package" value="cordova.plugin.flying.ServiceChecker"/>
+		  </feature>
+		</config-file>
+
+		<source-file src="src/android/ServiceChecker.java" target-dir="src/cordova/plugin/flying/"/>
+		<framework src="com.google.android.gms:play-services-base:11.0.1"/>		
+    </platform>
+
+</plugin>

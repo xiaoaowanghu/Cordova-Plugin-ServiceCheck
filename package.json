@@ -1,0 +1,7 @@
+{
+  "name": "cordova-plugin-flying-servicechecker",
+  "version": "1.0.0",
+  "description": "Cordova plugin for checking google play services",
+  "author": "Flying",
+  "license": "MIT"
+}
