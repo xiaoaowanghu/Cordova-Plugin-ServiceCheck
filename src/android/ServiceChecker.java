@@ -22,7 +22,7 @@ public class ServiceChecker extends CordovaPlugin {
         if (action.equals("checkGooglePlayService")) {
             int val = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(this.cordova.getActivity().getApplicationContext());
             LOG.d("checkGooglePlayService", "result=" + val);
-            JSONObject res = new JSONObject().put("isGooglePlayServicesAvailable", !(val == ConnectionResult.SERVICE_MISSING && val == ConnectionResult.SERVICE_DISABLED));
+            JSONObject res = new JSONObject().put("isGooglePlayServicesAvailable", !(val == ConnectionResult.SERVICE_MISSING || val == ConnectionResult.SERVICE_DISABLED));
             callbackContext.success(res);
             return true;
         } else {
