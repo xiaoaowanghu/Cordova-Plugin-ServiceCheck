@@ -16,7 +16,7 @@ Usage
 			alert(JSON.stringify(message));
 		}
 
-		ServiceChecker.check(success, failure);
+		ServiceChecker.checkGoogleService(success, failure);
 	});
 
 
