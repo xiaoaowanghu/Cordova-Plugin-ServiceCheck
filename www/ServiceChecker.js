@@ -1,5 +1,5 @@
 var exec = require('cordova/exec');
 
-exports.check = function (arg0, success, error) {
+exports.checkGoogleService = function (success, error, arg0) {
     exec(success, error, 'ServiceChecker', 'checkGooglePlayService', []);
 };
